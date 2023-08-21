@@ -1,9 +1,20 @@
 import { Sorter } from './Sorter';
 import { NumbersCollection } from './NumbersCollection';
 import { CharactersCollection } from './CharactersCollection';
-const numbersCollection = new NumbersCollection([1000, 3, -5, 0, -2]);
-const charactersCollection = new CharactersCollection('xaayb');
-const sorter = new Sorter(charactersCollection);
+import { LinkedList } from './LinkedList';
+// const numbersCollection = new NumbersCollection([1000, 3, -5, 0, -2]);
+// const charactersCollection = new CharactersCollection('xaayb');
+// const sorter = new Sorter(charactersCollection);
+// sorter.sort();
+// // console.log(numbersCollection.data);
+// console.log(charactersCollection);
+
+const linkedList = new LinkedList();
+linkedList.add(500);
+linkedList.add(-10);
+linkedList.add(-3);
+linkedList.add(3);
+linkedList.add(14);
+const sorter = new Sorter(linkedList);
 sorter.sort();
-// console.log(numbersCollection.data);
-console.log(charactersCollection);
+linkedList.print();
